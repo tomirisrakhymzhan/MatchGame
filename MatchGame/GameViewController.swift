@@ -94,9 +94,11 @@ class GameViewController: UIViewController {
             
             if previous.1 == cardImage {
                 // Cards match
+                score += 1
                 disableButton(withTag: previous.0)
                 disableButton(withTag: cardIndex)
                 previousCard = nil
+                checkWin()
             } else {
                 // No match, increment mistakes count
                 countMistakes += 1
@@ -190,16 +192,56 @@ class GameViewController: UIViewController {
         }
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkWin(){
+        if allCardsMatched(){
+            stopTimer()
+            print("score \(score)")
+            showAlert()
+        }
     }
-    */
+    
+    func allCardsMatched() -> Bool {
+        for buttonIndex in 0..<16 {
+            if let button = view.viewWithTag(buttonIndex) as? UIButton {
+                if button.isEnabled {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+    func showAlert(){
+        let alertController = UIAlertController(title: "Game Over", message: "Your finished matching cards in: \(self.secondsElapsed) sec", preferredStyle: .alert)
+        alertController.addTextField(){textfield in
+            textfield.placeholder = "Enter your name"
+            
+        }
+        
+        let saveName = UIAlertAction(title: "Save", style: .default) {_ in
+            guard let textField1 = alertController.textFields?.first else {
+                print("Textfield does not exist")
+                return
+            }
+            guard let name = textField1.text, !name.isEmpty else{
+                print("Name field is empty")
+                return
+            }
+            print(name)
+            self.saveUserScoreAsStruct(name: name)
+        }
+        alertController.addAction(saveName)
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive){_ in
+            print("cancelled")
+        }
+        alertController.addAction(cancel)
+        present(alertController, animated: true)
+    }
+    
+    func saveUserScoreAsStruct(name: String){
+        let userScore = Score(userName: name, seconds: secondsElapsed)
+        ScoresTableViewController.saveScore(score: userScore)
+    }
 
 }

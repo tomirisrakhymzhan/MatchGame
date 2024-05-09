@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Score {
+struct Score: Codable {
     let userName : String
     let seconds : Int
 }
