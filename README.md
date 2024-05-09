@@ -28,6 +28,5 @@ A 4x4 Matching Game (also known as a Memory Game or Concentration Game) implemen
 6. Go to "Scores" table view to see all saved scoresю.
 
 ## Screenshots
-
-![Matching Game](MatchGame/match-game.png)
-![Saved scores](MatchGame/scores-view.png)
+<img src="MatchGame/match-game.png" alt="Matching Game" width="300" height="600">
+<img src="MatchGame/score-view.png" alt="Saved scores" width="300" height="600">
