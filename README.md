@@ -5,11 +5,8 @@ A 4x4 Matching Game (also known as a Memory Game or Concentration Game) implemen
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [License](#license)
-- [Contributing](#contributing)
 
 ## Features
 
@@ -32,5 +29,5 @@ A 4x4 Matching Game (also known as a Memory Game or Concentration Game) implemen
 
 ## Screenshots
 
-![Game Play](screenshots/match-game.png)
-![Victory Alert](screenshots/scores-view.png)
+![Matching Game](screenshots/match-game.png)
+![Saved scores](screenshots/scores-view.png)
