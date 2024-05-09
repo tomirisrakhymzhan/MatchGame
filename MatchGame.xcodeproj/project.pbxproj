@@ -15,6 +15,8 @@
 		BFA20E2E2BE9B054008BA58B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA20E2D2BE9B054008BA58B /* GameViewController.swift */; };
 		BFA20E302BE9B06D008BA58B /* ScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA20E2F2BE9B06D008BA58B /* ScoresTableViewController.swift */; };
 		BFA20E322BE9E3CC008BA58B /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA20E312BE9E3CC008BA58B /* Score.swift */; };
+		BFA20E382BECCF21008BA58B /* match-game.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA20E372BECCF21008BA58B /* match-game.png */; };
+		BFA20E3A2BECCF30008BA58B /* scores-view.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA20E392BECCF30008BA58B /* scores-view.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BFA20E2D2BE9B054008BA58B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BFA20E2F2BE9B06D008BA58B /* ScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewController.swift; sourceTree = "<group>"; };
 		BFA20E312BE9E3CC008BA58B /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		BFA20E372BECCF21008BA58B /* match-game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "match-game.png"; sourceTree = "<group>"; };
+		BFA20E392BECCF30008BA58B /* scores-view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scores-view.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		BF733D1F2BE9A49100AC2795 /* MatchGame */ = {
 			isa = PBXGroup;
 			children = (
+				BFA20E362BECCE08008BA58B /* screenshots */,
 				BF733D202BE9A49100AC2795 /* AppDelegate.swift */,
 				BF733D222BE9A49100AC2795 /* SceneDelegate.swift */,
 				BF733D262BE9A49100AC2795 /* Main.storyboard */,
@@ -71,6 +76,15 @@
 				BFA20E312BE9E3CC008BA58B /* Score.swift */,
 			);
 			path = MatchGame;
+			sourceTree = "<group>";
+		};
+		BFA20E362BECCE08008BA58B /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				BFA20E392BECCF30008BA58B /* scores-view.png */,
+				BFA20E372BECCF21008BA58B /* match-game.png */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF733D2A2BE9A49300AC2795 /* Assets.xcassets in Resources */,
+				BFA20E382BECCF21008BA58B /* match-game.png in Resources */,
 				BF733D2D2BE9A49400AC2795 /* Base in Resources */,
 				BF733D282BE9A49100AC2795 /* Base in Resources */,
+				BFA20E3A2BECCF30008BA58B /* scores-view.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
