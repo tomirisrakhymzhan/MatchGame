@@ -29,10 +29,5 @@ A 4x4 Matching Game (also known as a Memory Game or Concentration Game) implemen
 
 ## Screenshots
 
-<<<<<<< HEAD
 ![Matching Game](MatchGame/screenshots/match-game.png)
 ![Saved scores](MatchGame/screenshots/scores-view.png)
-=======
-![Matching Game](MatchGame/screenshots/match-game.png)
-![Saved scores](MatchGame/screenshots/scores-view.png)
->>>>>>> cf1e4d8662626b2a6e78a1df224a21d961b5c8b7
