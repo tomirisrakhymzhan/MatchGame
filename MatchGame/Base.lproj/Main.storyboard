@@ -236,7 +236,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cardButton" destination="HKN-c3-a1D" id="pSr-Pt-VbL"/>
                         <outlet property="mistakesLabel" destination="z8r-ju-7dA" id="xsw-xa-erA"/>
                         <outlet property="movesLabel" destination="Tu1-pX-ad4" id="jKa-zs-nSR"/>
                         <outlet property="playBtn" destination="QpY-09-TBb" id="DVg-pz-jxu"/>
