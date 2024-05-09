@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     var countMoves = 0
     var countMistakes = 0
     var isPlaying = false
-    var previousCard : (Int, String)? = (0, "")
+    var previousCard : (Int, String)? = (1, "")
     var states = Dictionary<Int, String>()
     
     let formulaOneCars = ["ferrari", "mercedes", "redbull", "maclaren", "alpine", "astonmartin", "haas", "sauber"]
@@ -117,7 +117,7 @@ class GameViewController: UIViewController {
     }
     
     func turnAllCardsBlue() {
-        for index in 0..<16 {
+        for index in 1..<17 {
             flipButton(withTag: index)
         }
     }
@@ -137,7 +137,7 @@ class GameViewController: UIViewController {
     }
     
     func setAllButtonsEnabled(_ isEnabled: Bool) {
-        for index in 0..<16 {
+        for index in 1..<17 {
             if let button = view.viewWithTag(index) as? UIButton {
                 button.isEnabled = isEnabled
             }
@@ -161,13 +161,13 @@ class GameViewController: UIViewController {
         
         // Assign images to card indices
         for index in 0..<16 {
-            states[index] = cardPool[index]
+            states[index+1] = cardPool[index]
         }
         print(states)
     }
     
     func turnGridToAllBlue() {
-        for tag in 0...15{
+        for tag in 1...16{
             if let button = view.viewWithTag(tag) as? UIButton {
                 button.setBackgroundImage(UIImage(named: "blue"), for: .disabled)
             }
@@ -175,7 +175,7 @@ class GameViewController: UIViewController {
     }
     
     func disableAllGridButtons(){
-        for tag in 0...15{
+        for tag in 1...16{
             if let button = view.viewWithTag(tag) as? UIButton {
                 button.isEnabled = false
             }
@@ -183,7 +183,7 @@ class GameViewController: UIViewController {
     }
     
     func enableAllGridButtons(){
-        for tag in 0...15{
+        for tag in 1...16{
             if let button = view.viewWithTag(tag) as? UIButton {
                 button.isEnabled = true
             }
